@@ -1,1 +1,0 @@
-To access the html website add /waffles.html to the link
