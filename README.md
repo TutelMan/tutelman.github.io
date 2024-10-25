@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,7 +9,7 @@
         Start Page
     </title>
     <head> 
-        <a href="https://tutelman.github.io/waffles.html">What are waffles</a> 
+        A
     </head>
 </body>
 </html>
