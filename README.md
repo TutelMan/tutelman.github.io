@@ -10,6 +10,7 @@
     </title>
     <head> 
         <header> <a href="https://tutelman.github.io/waffles.html">Waffles</a> </header>
-    </head>
+        <header> <a href="https://tutelman.github.io/manifesto.html">Manifesto</a></header>
+    </header>
 </body>
 </html>
