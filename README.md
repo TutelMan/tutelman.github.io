@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,5 +13,6 @@
         <header> <a href="https://tutelman.github.io/waffles.html">Waffles</a> </header>
         <header> <a href="https://tutelman.github.io/manifesto.html">Manifesto</a></header>
         <header> <a href="https://tutelman.github.io/time.html">Da Time</a></header>
+        <header> <a href="https://tutelman.github.io/hello.py">Hello.py</a></header>
 </body>
 </html>
