@@ -12,3 +12,6 @@ header {
     text-align: center;
     size: 5;
 }
+body {
+    background-color: blueviolet;
+}
