@@ -49,3 +49,4 @@ start cmd.exe /c ipconfig
 start cmd.exe /c ipconfig
 start cmd.exe /c ipconfig
 start cmd.exe /c ipconfig
+msg "Your not hacked I swear!"
