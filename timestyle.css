@@ -4,8 +4,9 @@ h1 {
     text-shadow: cornflowerblue;
 }
 h3 {
-    color: blue;
+    color: cornflowerblue;
     text-align: center;
+    text-shadow: cornflowerblue;
 }
 body {
     background-color: blueviolet;
