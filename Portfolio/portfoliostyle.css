@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 24px;
+    transition: transform 0.3s ease; /* Smooth transition for the logo text */
+}
+
+header .logo h1:hover {
+    transform: scale(1.2); /* Makes the logo text 20% bigger on hover */
+}
+
+header a {
+    color: white; /* Ensures the link color is white */
+    text-decoration: none; /* Removes the underline */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s, transform 0.3s; /* Transition for color and text scaling */
+}
+
+nav ul li:hover {
+    color: #f1f1f1; /* Changes color on hover */
+    transform: scale(1.1); /* Makes the navigation text 10% bigger on hover */
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+main h3 {
+    font-size: 20px;
+    color: #333;
+    line-height: 1.6;
+}
