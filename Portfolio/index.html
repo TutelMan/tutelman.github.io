@@ -5,29 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page &#128578;</title>
     <link rel="stylesheet" href="portfoliostyle.css">
-    <script src="scripts/script.js"></script>
-    <style>
-        /* Add the CSS for the fluid simulation background */
-        body, html {
-            margin: 0;
-            padding: 0;
-            overflow: hidden; /* Prevent scrolling */
-            height: 100%;
-        }
-
-        canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1; /* Place canvas behind other content */
-        }
-    </style>
 </head>
 <body>
-    <canvas id="fluid-simulation"></canvas> <!-- Fluid simulation canvas -->
-
     <header>
         <div class="logo">
             <h1><a href="https://tutelman.github.io/">Start Thingy</a></h1>
@@ -46,53 +25,5 @@
         <p>This is where you can learn more about me, my skills, and my work.</p>
         <img src="Turtle.jpg" alt="Turtle">
     </main>
-
-    <script>
-        // JavaScript for the fluid simulation
-        const canvas = document.getElementById('fluid-simulation');
-        const gl = canvas.getContext('webgl');
-
-        function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-
-        window.addEventListener('resize', resizeCanvas);
-        resizeCanvas(); // Set initial size
-
-        // Initialize the WebGL Fluid Simulation (placeholder function)
-        function initWebGLFluid(gl, canvas) {
-            console.log("Initialize WebGL fluid simulation here.");
-            // Example: Add your fluid library initialization code here
-        }
-
-        // Placeholder for adding fluid effects
-        function addFluidEffect(x, y) {
-            console.log(`Add fluid effect at (${x}, ${y})`);
-        }
-
-        // Make the simulation interactive
-        let isDrawing = false;
-
-        canvas.addEventListener('mousedown', () => (isDrawing = true));
-        canvas.addEventListener('mouseup', () => (isDrawing = false));
-        canvas.addEventListener('mousemove', (e) => {
-            if (isDrawing) {
-                const x = e.clientX / canvas.width;
-                const y = 1 - e.clientY / canvas.height;
-                addFluidEffect(x, y); // Replace with actual fluid effect logic
-            }
-        });
-
-        canvas.addEventListener('touchmove', (e) => {
-            const touch = e.touches[0];
-            const x = touch.clientX / canvas.width;
-            const y = 1 - touch.clientY / canvas.height;
-            addFluidEffect(x, y);
-        });
-
-        // Initialize the simulation
-        initWebGLFluid(gl, canvas);
-    </script>
 </body>
 </html>
