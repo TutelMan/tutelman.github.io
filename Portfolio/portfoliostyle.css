@@ -4,9 +4,6 @@ body {
     padding: 0;
     background-color: #f4f4f4;
 }
-h3 {
-    text-align: center;
-}
 
 header {
     display: flex;
@@ -20,16 +17,16 @@ header {
 header .logo h1 {
     margin: 0;
     font-size: 24px;
-    transition: transform 0.3s ease; /* Smooth transition for the logo text */
+    transition: transform 0.3s ease;
 }
 
 header .logo h1:hover {
-    transform: scale(1.2); /* Makes the logo text 20% bigger on hover */
+    transform: scale(1.2);
 }
 
 header a {
-    color: white; /* Ensures the link color is white */
-    text-decoration: none; /* Removes the underline */
+    color: white;
+    text-decoration: none;
 }
 
 nav ul {
@@ -41,18 +38,18 @@ nav ul {
 
 nav ul li {
     margin: 0 15px;
+    font-size: 18px;
+    transition: color 0.3s, transform 0.3s;
 }
 
-nav ul li {
+nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s, transform 0.3s; /* Transition for color and text scaling */
 }
 
 nav ul li:hover {
-    color: #f1f1f1; /* Changes color on hover */
-    transform: scale(1.1); /* Makes the navigation text 10% bigger on hover */
+    color: #f1f1f1;
+    transform: scale(1.1);
 }
 
 main {
@@ -60,9 +57,39 @@ main {
     text-align: center;
 }
 
-main h3 {
-    font-size: 20px;
-    color: #333;
-    line-height: 1.6;
+main a.link {
+    display: inline-block;
+    font-size: 1.2em;
+    color: #007bff;
+    margin-bottom: 20px;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
 }
 
+main a.link:hover {
+    color: #0056b3;
+    border-bottom: 2px solid #0056b3;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.image {
+    max-width: 150px;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.image:hover {
+    transform: scale(1.1);
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+}
