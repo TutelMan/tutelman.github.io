@@ -93,3 +93,17 @@ main a.link:hover {
     transform: scale(1.1);
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
 }
+.image {
+    max-width: 150px; /* Set a fixed width */
+    height: auto; /* Maintain aspect ratio */
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    object-fit: contain; /* Ensures image is displayed properly within its box */
+    transition: transform 0.2s;
+}
+
+.image:hover {
+    transform: scale(1.1);
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+}
