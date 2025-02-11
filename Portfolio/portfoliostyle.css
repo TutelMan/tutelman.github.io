@@ -93,6 +93,7 @@ main a.link:hover {
     transform: scale(1.1);
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
 }
+
 .image {
     max-width: 150px; /* Set a fixed width */
     height: auto; /* Maintain aspect ratio */
@@ -107,6 +108,14 @@ main a.link:hover {
     transform: scale(1.1);
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
 }
+
+iframe {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    z-index: 999;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
