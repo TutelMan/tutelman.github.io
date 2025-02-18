@@ -1,7 +1,3 @@
-import random
-import tkinter as tk
-from tkinter import messagebox
-
 // Function to simulate a spin
 function do_the_spin(roulette_numbers) {
     const keys = Object.keys(roulette_numbers);
