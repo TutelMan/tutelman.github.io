@@ -42,11 +42,13 @@
     btn.setAttribute('aria-pressed', String(isDark));
   }
 
-  // Insert the toggle early in the document
+  // Insert the toggle into the <body> (more reliable than appending to <html>)
   function insertToggle() {
     try {
       const btn = createToggle();
-      document.documentElement.appendChild(btn);
+      // prefer body; if not available yet, fall back to documentElement
+      const target = document.body || document.documentElement;
+      target.appendChild(btn);
     } catch (e) {
       // If DOM isn't ready, try again shortly
       setTimeout(insertToggle, 50);
