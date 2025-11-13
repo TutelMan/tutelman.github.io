@@ -1,0 +1,66 @@
+/* Dark mode overrides and toggle styles */
+:root {
+    --dark-bg: #0b0b0b;
+    --dark-surface: #121212;
+    --dark-text: #e6e6e6;
+    --dark-link: #7dd3fc;
+}
+
+html.dark {
+    background-color: var(--dark-bg) !important;
+    color: var(--dark-text) !important;
+}
+
+/* Make most elements adopt dark-friendly colours. Use !important so this
+   reliably overrides simple site styles without editing many files. */
+html.dark body,
+html.dark main,
+html.dark header,
+html.dark nav,
+html.dark section,
+html.dark article,
+html.dark footer,
+html.dark .container,
+html.dark .page-wrapper {
+    background-color: transparent !important;
+    color: var(--dark-text) !important;
+}
+
+html.dark a {
+    color: var(--dark-link) !important;
+}
+
+/* Borders and separators */
+html.dark hr,
+html.dark .divider,
+html.dark .meta {
+    border-color: rgba(255,255,255,0.08) !important;
+    color: rgba(255,255,255,0.75) !important;
+}
+
+/* Keep images, SVGs and iframes intact (avoid inverting them). */
+html.dark img,
+html.dark svg,
+html.dark iframe {
+    filter: none !important;
+}
+
+/* Dark-mode toggle button */
+#dark-mode-toggle {
+    position: fixed;
+    right: 12px;
+    top: 12px;
+    z-index: 9999;
+    background: rgba(0,0,0,0.5);
+    color: var(--dark-text);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 8px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    backdrop-filter: blur(6px);
+}
+
+#dark-mode-toggle:focus {
+    outline: 2px solid rgba(125,211,252,0.6);
+}
