@@ -2,8 +2,8 @@
 function do_the_spin(roulette_numbers) {
     const keys = Object.keys(roulette_numbers);
     const spin_result = keys[Math.floor(Math.random() * keys.length)];
-    const spin_colour = roulette_numbers[spin_result];
-    return [spin_result, spin_colour];
+    const spin_Color = roulette_numbers[spin_result];
+    return [spin_result, spin_Color];
 }
 
 // Function to animate the spin
@@ -27,34 +27,34 @@ function spin() {
 
 function stop_spin() {
     spinning = false;
-    const colour_or_number = document.querySelector('input[name="choice"]:checked').value;
-    if (colour_or_number === "colour") {
-        const colour = document.getElementById("colour").value.toLowerCase();
-        if (!["black", "red", "green"].includes(colour)) {
+    const Color_or_number = document.querySelector('input[name="choice"]:checked').value;
+    if (Color_or_number === "Color") {
+        const Color = document.getElementById("Color").value.toLowerCase();
+        if (!["black", "red", "green"].includes(Color)) {
             alert("Silly, that's not black, red or green!");
             return;
         }
-    } else if (colour_or_number === "number") {
+    } else if (Color_or_number === "number") {
         const number = document.getElementById("number").value;
         if (isNaN(number) || number < 0 || number > 36) {
             alert("Please enter a valid number between 0 and 36.");
             return;
         }
     } else {
-        alert("COLOUR OR NUMBER!");
+        alert("Color OR NUMBER!");
         return;
     }
 
-    const [spin_result, spin_colour] = do_the_spin(roulette_numbers);
+    const [spin_result, spin_Color] = do_the_spin(roulette_numbers);
     let result_text;
-    if (colour_or_number === "colour") {
-        result_text = `Roulette spin result: ${spin_colour}`;
-        if (colour === spin_colour) {
+    if (Color_or_number === "Color") {
+        result_text = `Roulette spin result: ${spin_Color}`;
+        if (Color === spin_Color) {
             result_text += "\nWinner!";
         } else {
             result_text += "\nKeep gambling!";
         }
-    } else if (colour_or_number === "number") {
+    } else if (Color_or_number === "number") {
         result_text = `Roulette spin result: ${spin_result}`;
         if (number == spin_result) {
             result_text += "\nWinner!";
@@ -69,7 +69,7 @@ function stop_spin() {
 
 // Function to toggle the state of the number entry
 function toggle_number_entry() {
-    if (document.querySelector('input[name="choice"]:checked').value === "colour") {
+    if (document.querySelector('input[name="choice"]:checked').value === "Color") {
         document.getElementById("number").disabled = true;
     } else {
         document.getElementById("number").disabled = false;
@@ -93,22 +93,22 @@ main_frame.style.textAlign = "center";
 document.getElementById("roulette-game").appendChild(main_frame);
 
 const choice_label = document.createElement("label");
-choice_label.textContent = "Choose Colour or Number:";
+choice_label.textContent = "Choose Color or Number:";
 choice_label.style.fontSize = "16px";
 main_frame.appendChild(choice_label);
 
-const colour_radio = document.createElement("input");
-colour_radio.type = "radio";
-colour_radio.name = "choice";
-colour_radio.value = "colour";
-colour_radio.checked = true;
-colour_radio.onclick = toggle_number_entry;
-main_frame.appendChild(colour_radio);
+const Color_radio = document.createElement("input");
+Color_radio.type = "radio";
+Color_radio.name = "choice";
+Color_radio.value = "Color";
+Color_radio.checked = true;
+Color_radio.onclick = toggle_number_entry;
+main_frame.appendChild(Color_radio);
 
-const colour_label = document.createElement("label");
-colour_label.textContent = "Colour";
-colour_label.style.fontSize = "14px";
-main_frame.appendChild(colour_label);
+const Color_label = document.createElement("label");
+Color_label.textContent = "Color";
+Color_label.style.fontSize = "14px";
+main_frame.appendChild(Color_label);
 
 const number_radio = document.createElement("input");
 number_radio.type = "radio";
@@ -122,24 +122,24 @@ number_label.textContent = "Number";
 number_label.style.fontSize = "14px";
 main_frame.appendChild(number_label);
 
-const frame_colour = document.createElement("div");
-frame_colour.style.padding = "10px";
-main_frame.appendChild(frame_colour);
+const frame_Color = document.createElement("div");
+frame_Color.style.padding = "10px";
+main_frame.appendChild(frame_Color);
 
-const colour_select_label = document.createElement("label");
-colour_select_label.textContent = "Choose Colour:";
-colour_select_label.style.fontSize = "14px";
-frame_colour.appendChild(colour_select_label);
+const Color_select_label = document.createElement("label");
+Color_select_label.textContent = "Choose Color:";
+Color_select_label.style.fontSize = "14px";
+frame_Color.appendChild(Color_select_label);
 
-const colour_select = document.createElement("select");
-colour_select.id = "colour";
-["black", "red", "green"].forEach(colour => {
+const Color_select = document.createElement("select");
+Color_select.id = "Color";
+["black", "red", "green"].forEach(Color => {
     const option = document.createElement("option");
-    option.value = colour;
-    option.textContent = colour;
-    colour_select.appendChild(option);
+    option.value = Color;
+    option.textContent = Color;
+    Color_select.appendChild(option);
 });
-frame_colour.appendChild(colour_select);
+frame_Color.appendChild(Color_select);
 
 const frame_number = document.createElement("div");
 frame_number.style.padding = "10px";
